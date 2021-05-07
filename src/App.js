@@ -16,7 +16,7 @@ class App extends React.Component {
     } else if (num === "^" || num === "%" || num === "/" || num === "*") {
       return
     } else if (num === "=") {
-      // learned about prevState and why you shouldn't do what is below
+      // learned about prevState and why you shouldn't do what is below ------------v
       this.setState({ output: math.evaluate(this.state.output), history: [...this.state.history, this.state.output] });
     } else if (this.state.output === 0) {
       this.setState({ output: num });
