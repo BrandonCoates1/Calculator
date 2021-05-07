@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+
+.main, body {
+    display: flex;
+    height: 100%;
+    background-color: rgb(139, 139, 139);
+    justify-content: space-evenly;
+    font-family: "Spruce Sans Pro";
+    gap: 2vw;
+    color: white;
+}
+
+* {
+    margin: 0;
+}
+
+.dummy {
+    position: absolute;
+    visibility: hidden;
+    white-space: nowrap;
+    font-size: 3.5em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* background-color: aqua; */
+    height: 60vh;
+    width: 30vw;
+}
+
+button {
+    font-size: 2em;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    background-color: rgb(105, 92, 89);
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(105, 85, 80);
+}
+
+.output {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(75, 75, 75);
+    padding-right: 2vw;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    font-size: 3.5em;
+}
+
+.top3 {
+    background-color: rgb(70, 64, 62);
+}
+
+.top3:hover {
+    background-color: rgb(68, 58, 55);
+}
+
+.operator {
+    background-color: rgb(255, 172, 64);
+}
+
+.operator:hover {
+    background-color: rgb(255, 160, 36);
+}
+
+.zero {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.historyButton {
+    position: absolute;
+    top: 8.5vh;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    margin-left: 0.2vw;
+    height: fit-content;
+    font-size: 1.5em;
+}
+
+.historyButton:hover {
+    background-color: rgba(255, 255, 255, 0.39);
+}
+
+.container2 {
+    display: flex;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 60vh;
+    width: 20vw;
+    background-color: rgb(75, 75, 75);
+    color: white;
+    font-size: 3em;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 60vw;
+    }
+}
