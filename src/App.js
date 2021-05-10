@@ -13,13 +13,15 @@ class App extends React.Component {
   handleClick = (num) => {
     if(num === "AC") {
       this.setState({ output: 0, history: [] });
-    } else if (num === "^" || num === "%" || num === "/" || num === "*") {
-      return
     } else if (num === "=") {
-      // learned about prevState and why you shouldn't do what is below ------------v
+      // learned about prevState and why you shouldn't do what is below ------------v prevState as the parameter
       this.setState({ output: math.evaluate(this.state.output), history: [...this.state.history, this.state.output] });
     } else if (this.state.output === 0) {
-      this.setState({ output: num });
+      if (num === "^" || num === "%" || num === "/" || num === "*") {
+        return
+      } else {
+        this.setState({ output: num });
+      }
     } else {
       let str = this.state.output.toString().concat(num.toString());
       let array = str.split("");
